@@ -13,7 +13,7 @@ if page == "Dataset":
     st.header("Halamat Dataset")
 
     # Baca file CSV
-    data = get_data_from_db()
+    data = pd.read_csv("pddikti_example.csv")
 
     # Tampilkan data di streamlit
     st.write(data)
