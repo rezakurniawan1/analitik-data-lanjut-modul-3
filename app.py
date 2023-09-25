@@ -3,22 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mysql.connector
 
-def get_connection():
-    connection = mysql.connector.connect(
-        host='localhost', #misalnya "localhost"
-        user='root',
-        password='',
-        database='db_dal'
-    )
-    return connection
-
-def get_data_from_db():
-    conn = get_connection()
-    query = "SELECT * FROM pddikti_example"
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
-
 # Judul aplikasi
 st.title('Streamlit Simple App')
 
